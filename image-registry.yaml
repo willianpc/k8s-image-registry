@@ -25,13 +25,28 @@ spec:
 
 ---
 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: local-path-pvc
+  namespace: image-registry
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: local-path
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: image-registry
   name: image-registry
-  namespace: default
+  namespace: image-registry
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -70,4 +85,3 @@ spec:
         persistentVolumeClaim:
           claimName: local-path-pvc
 
----
