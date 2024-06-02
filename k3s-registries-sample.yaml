@@ -1,0 +1,15 @@
+mirrors:
+  "homelab:5000":
+    endpoint:
+      - "http://homelab:5000"
+  "homelab.local:5000":
+    endpoint:
+      - "http://homelab.local:5000"
+configs:
+  "homelab:5000":
+    tls:
+      insecure_skip_verify: true
+
+    "homelab.local:5000":
+    tls:
+      insecure_skip_verify: true

@@ -1,0 +1,6 @@
+{
+  "insecure-registries": [
+    "homelab:30729",
+    "homelab:5000"
+  ]
+}
