@@ -13,7 +13,7 @@ All required resources are contained in a single YAML file, which creates:
 1. A `image-registry` namespace, where all resources will be deployed
 1. The image-registry deployment
 1. A service exposing the port 5000
-1. A PersistentVolumeClaim referencing to the local-path storage class
+1. A PersistentVolumeClaim referencing the local-path storage class
 
 ## Configuration
 
@@ -42,6 +42,10 @@ configs:
 ```
 
 Change the hostname and ports accordingly.
+
+Optional: Enable k3s logs with `sudo k3s server --log=/etc/rancher/k3s/log.txt`
+
+Restart k3s with `sudo systemctl restart k3s`.
 
 > A sample file is provided in this repo
 
