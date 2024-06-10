@@ -21,7 +21,7 @@ After the image registry is deployed, make the following configuration:
 
 ### In the k3s cluster
 
-Create the file `/etc/rancher/k3s/registries/yaml` with the following content:
+Create the file `/etc/rancher/k3s/registries.yaml` with the following content:
 
 ```yaml
 mirrors:
